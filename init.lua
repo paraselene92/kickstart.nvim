@@ -263,6 +263,11 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+    config = function()
+      require('gitsigns').setup {
+        vim.keymap.set('n', '<leader>hs', require('gitsigns').stage_hunk, { desc = 'Git Stage Hunk' }),
+      }
+    end,
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
